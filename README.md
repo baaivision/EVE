@@ -36,3 +36,18 @@ We'll release the code and models within a week ! 💥
 
 ## License
 The content of this project itself is licensed under [LICENSE](https://github.com/baaivision/EVE/blob/main/LICENSE).
+
+
+## ✒️ Citation
+If **EVE** is helpful for your research, please consider **star** ⭐ and **citation** 📝 :
+```bibtex
+@article{diao2024EVE,
+  title={Unveiling Encoder-Free Vision-Language Models},
+  author={Diao, Haiwen and Cui, Yufeng and Li, Xiaotong and Wang, Yueze and Lu, Huchuan and Wang, Xinlong},
+  journal={arXiv preprint arXiv:2406.11832},
+  year={2024}
+}
+```
+
+## License
+The content of this project itself is licensed under [LICENSE](https://github.com/baaivision/EVE/blob/main/LICENSE).
