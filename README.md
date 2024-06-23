@@ -54,6 +54,8 @@ The usage of EVE checkpoints should comply with the base LLM's model license: [L
 
 ## Install
 
+#### Environment
+
 ```bash
 git clone https://github.com/baaivision/EVE.git
 cd EVE
@@ -64,6 +66,33 @@ pip install --upgrade pip
 pip install -e .
 pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
+```
+
+#### Preparation
+
+Download `vicuna_model` and extract them into `lmsys/` path:
+- [vicuna-7b-v1.5](https://huggingface.co/lmsys/vicuna-7b-v1.5).    
+
+Download `preprocessor` and extract them into `openai/` path:
+- [clip-vit-large-patch14-336](https://huggingface.co/openai/clip-vit-large-patch14-336);  
+- [eve-patch14-anypixel-672](https://drive.google.com/file/d/1f_mA4owjm0v3awrzPv4LOURz6IzVFVZ6/view?usp=sharing);  
+- [eve-patch14-anypixel-1344](https://drive.google.com/file/d/1V7hz37X7n9s2KmghoQ9bDVHE6J4HuQ7z/view?usp=sharing).  
+
+```none
+lmsys
+├── vicuna-7b-v1.5
+│   │── config.json
+│   │── ...
+openai
+├── clip-vit-large-patch14-336
+│   │── config.json
+│   │── ...
+├── eve-patch14-anypixel-672
+│   │── preprocessor_config.json
+│   │── ...
+├── eve-patch14-anypixel-1344
+│   │── preprocessor_config.json
+│   │── ...
 ```
 
 ## Quick Usage
