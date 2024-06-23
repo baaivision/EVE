@@ -41,8 +41,8 @@ The usage of EVE checkpoints should comply with the base LLM's model license: [L
 
 ## 👨‍💻 Todo List
 - [ ] Release training code and EVE-7B HF_link   
-- [ ] Involve more modalities into EVE network  
-- [ ] Full EVE series (3B-70B) with better data, strategy, structure 
+- [ ] Involve more modalities into the unified EVE network  
+- [ ] Full EVE series (3B-70B) with better data, strategy, and structure 
 
 ## Contents
 - [Install](#install)
@@ -87,13 +87,14 @@ Check out the details wth the `load_pretrained_model` function in `eve/model/bui
 
 You can also use `eve/eval/eval_one_sample.py` to get the output easily. By doing so, you can use this code on Colab directly after downloading this repository.
 
-``` python
+``` 
+# run script
 CUDA_VISIBLE_DEVICES=0 python eve/eval/eval_one_sample.py
 ```
 </details>
 
 ## Demo
-You can build your local demo by:
+You can also build up your local demo using the following script:
 ```
 # run script
 python tools/app.py
@@ -121,7 +122,11 @@ we use all 33M image-text pairs (EVE-cap33M) to train patch embedding and aligni
 | EVE_Pretrain | 1 | 512 | 4e-5 | cosine decay | 0.01 | 2048 | 0 | AdamW | zero3 |
 
 **(3) Supervised Fine-tuning Stage:** 
-We finetune the entire architecture with LLaVA-mix-665K for EVE-7B and extra 1.2M SFT conversation data for EVE-7B (HD).
+We finetune the entire architecture with LLaVA-mix-665K for EVE-7B and extra 1.2M SFT conversation data for EVE-7B (HD).  
+
+| Model | Epoch | Batch_Size | Learning_Rate | LR_Schedule | Warmup_Ratio | Max_Length | Weight_decay | Optimizer | DeepSpeed |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
+| EVE_Finetune | 1 | 128 | 2e-5 | cosine decay | 0.01 | 2048/4096 | 0 | AdamW | zero3 | 
 
 To train on fewer GPUs, you can reduce the `per_device_train_batch_size` and increase the `gradient_accumulation_steps` accordingly. Always keep the global batch size the same: `per_device_train_batch_size x gradient_accumulation_steps x num_gpus`.
 

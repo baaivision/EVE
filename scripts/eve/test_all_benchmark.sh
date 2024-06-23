@@ -1,6 +1,6 @@
-CKPT_NAME='EVE-7B-HD-v1_0'
+CKPT_NAME='EVE-7B-HD-v1.0'
 CKPT_PATH='BAAI'
-mkdir log_results
+mkdir -p log_results
 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 bash scripts/eve/eval/seed.sh ${CKPT_NAME} ${CKPT_PATH}  2>&1 | tee log_results/${CKPT_NAME}_seed
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 bash scripts/eve/eval/gqa.sh ${CKPT_NAME} ${CKPT_PATH}  2>&1 | tee log_results/${CKPT_NAME}_gqa

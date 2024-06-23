@@ -2,7 +2,7 @@ from eve.model.builder import load_pretrained_model
 from eve.mm_utils import get_model_name_from_path
 from eve.eval.run_eve import eval_model
 
-model_path = "BAAI/EVE-7B-HD-v1_0"
+model_path = "BAAI/EVE-7B-HD-v1.0"
 
 prompt = "Please describle image contents in detail."
 image_file = "examples/ocr_beijing.jpg"

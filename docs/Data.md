@@ -3,8 +3,8 @@
 | Data name | Data size |
 | --- | ---: |
 | EVE-cap33M.json | 28 GB |
-| [LLaVA-v1_5-mix665K.json](https://drive.google.com/file/d/1cnuVSRQ6_W80ZBnEYCeCzG9KHMGO3XrG/view?usp=sharing) | 983 MB |
-| [EVE-mix1.8M.json](https://drive.google.com/file/d/1iGg85xdJhyZv-s1ttCe_SZ-CUk-hThjs/view?usp=sharing) | 2.1 GB |
+| [LLaVA_v1_5_mix665K.json](https://drive.google.com/file/d/1cnuVSRQ6_W80ZBnEYCeCzG9KHMGO3XrG/view?usp=sharing) | 983 MB |
+| [EVE_instruct_mix1.8M.json](https://drive.google.com/file/d/1iGg85xdJhyZv-s1ttCe_SZ-CUk-hThjs/view?usp=sharing) | 2.1 GB |
 
 ### EVE-PT Dataset
 We introduce publicly available web-scale data, including image-only: SA-1B, OpenImages; and image-text: LAION. We remove noisy text captions and reproduce 33M high-quality descriptions via Emu2 (17B) and LLaVA-1.5 (13B) as EVE-cap33M.
@@ -14,7 +14,7 @@ We utilize LLaVA-v1_5-mix665K as SFT data to obtain the standard version of EVE-
 
 ### Prepare Images
 
-Please download the annotation of the final mixture SFT data: llava_v1_5_mix665k.json and EVE_mix1.8M.json, and download the images from constituting datasets:
+Please download the annotation of the final mixture SFT data: llava_v1_5_mix665k.json and eve_instruct_mix1.8m.json; Then download the images from constituting datasets:
 
 - COCO: [train2017](http://images.cocodataset.org/zips/train2017.zip)
 - GQA: [images](https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip)
