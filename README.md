@@ -36,7 +36,7 @@ The usage of EVE checkpoints should comply with the base LLM's model license: [L
 | Model | LLM | Weight | VQAv2 | GQA | VizWiz | SQA_I | TextVQA | POPE | MME_P | MMBench | MM_Vet | 
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | EVE_7B | Vicuna_7B | HF link | 75.4 | 60.8 | 41.8 | 63.0 | 51.9 | 83.6 | 1217.3 | 49.5 | 25.6 |
-| EVE_7B_HD | Vicuna-7B | [HF link](https://huggingface.co/BAAI/EVE-7B-HD-v1_0) | 78.6 | 62.6 | 51.1 | 64.9 | 56.8 | 85.0 | 1305.7 | 52.3 | 25.7 |
+| EVE_7B_HD | Vicuna-7B | [HF link](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) | 78.6 | 62.6 | 51.1 | 64.9 | 56.8 | 85.0 | 1305.7 | 52.3 | 25.7 |
 
 ## 👨‍💻 Todo List
 - [ ] Release training code and EVE-7B HF   
@@ -73,7 +73,7 @@ from eve.model.builder import load_pretrained_model
 from eve.mm_utils import get_model_name_from_path
 from eve.eval.run_eve import eval_model
 
-model_path = "BAAI/EVE-7B-HD-v1_0"
+model_path = "BAAI/EVE-7B-HD-v1.0"
 
 tokenizer, model, image_processor, context_len = load_pretrained_model(
     model_path=model_path,
