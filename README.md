@@ -3,7 +3,7 @@
 🚀🚀🚀 Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Models](https://arxiv.org/abs/2406.11832)**.
 
 ## 📜 News
-[2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1_0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1_0) weights! 🚀   
+[2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) weights! 🚀   
 [2024/06/18] The [paper](https://arxiv.org/abs/2406.11832) is released! 💥   
 
 ## 🪐 Motivation
@@ -18,7 +18,7 @@
 - **Authors**: [Haiwen Diao*](https://scholar.google.com/citations?user=46eCjHQAAAAJ&hl=zh-CN), [Yufeng Cui*](https://scholar.google.com/citations?user=5Ydha2EAAAAJ&hl=zh-CN&oi=ao), [Xiaotong Li](https://scholar.google.com/citations?hl=zh-CN&user=cpCE_T4AAAAJ), [Yueze Wang](https://openreview.net/profile?id=~Yueze_Wang1), [Huchuan Lu📧](https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=zh-CN), [Xinlong Wang📧](https://scholar.google.com/citations?user=DPz0DjYAAAAJ&hl=zh-CN)
 
 - **Institutes**: Dalian University of Technology; Beijing Academy of Artificial Intelligence; Peking University
-- **Model Zoo**: [🤗[EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1_0)] [🤗EVE-7B] [🤗[EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1_0)] 
+- **Model Zoo**: [🤗[EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0)] [🤗EVE-7B] [🤗[EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0)] 
 
 ## 💡 Highlights
 - 🔥 **Superior Capability:** *Originated encoder-free* LVLM with *arbitrary* image aspect ratio, outperforming the counterpart *[Fuyu-8B](https://huggingface.co/adept/fuyu-8b)* and approaching *modular encoder-based* LVLMs.  
