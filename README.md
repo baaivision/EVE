@@ -8,13 +8,17 @@ Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Mod
 [2024/06/18] The [paper](https://arxiv.org/abs/2406.11832) is released ! 💥   
 
 ## 💡 Motivation
+
+- **Can we remove vision encoder from VLMs?**
+
+- **How to transfer an LLM to an encoder-free VLM efficiently and stablely?**
+  
+- **How to bridge the performance gap between encoder-free and encoder-based VLMs?** 
+
+
 <p align="center">
   <img src="images/eve_motivation1.png">
 </p>
-
-- Can We Remove Vision Encoder from LVLMs ?  
-- How can We Transfer a LLM to an Encoder-free LVLM ?
-- How can We Efficiently Build It that Rivals Encoder-based LVLMs ?
 
 ## 🛸 Architecture
 <p align="center">
@@ -46,8 +50,8 @@ The usage of EVE checkpoints should comply with the base LLM's model license: [L
 | EVE_7B_HD | Vicuna-7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) | 78.6 | 62.6 | 51.1 | 64.9 | 56.8 | 85.0 | 1305.7 | 52.3 | 56.8 | 25.7 |
 
 ## 👨‍💻 Todo List
-- [ ] Involve more modalities into the unified EVE network  
-- [ ] Full EVE series (3B-70B) with larger data, better training strategy and model structure 
+- [ ] Involve more modalities into the unified EVE network.
+- [ ] Full EVE series trained with more data, varied sizes, and better base models.
 
 ## Contents
 - [Install](#install)
