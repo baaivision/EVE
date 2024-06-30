@@ -2,19 +2,45 @@
 
 | Data name | Data size |
 | --- | ---: |
-| EVE-cap33M.json | 28 GB |
+| EVE_pretrain_cap33M.json | 28 GB |
 | [LLaVA_v1_5_mix665K.json](https://drive.google.com/file/d/1cnuVSRQ6_W80ZBnEYCeCzG9KHMGO3XrG/view?usp=sharing) | 983 MB |
 | [EVE_instruct_mix1.8M.json](https://drive.google.com/file/d/1iGg85xdJhyZv-s1ttCe_SZ-CUk-hThjs/view?usp=sharing) | 2.1 GB |
 
 ### EVE-PT Dataset
-We introduce publicly available web-scale data, including image-only: SA-1B, OpenImages; and image-text: LAION. We remove noisy text captions and reproduce 33M high-quality descriptions via Emu2 (17B) and LLaVA-1.5 (13B) as EVE-cap33M.
+We introduce publicly available web-scale data, including image-only: SA-1B, OpenImages; and image-text: LAION. We remove noisy text captions and reproduce 33M high-quality descriptions via Emu2 (17B) and LLaVA-1.5 (13B) as EVE-cap33M. **We have no specific plan to release pretraining data.** You can download and filter images according to our paper's guidelines, utilizing [LLaVA-NEXT](https://github.com/LLaVA-VL/LLaVA-NeXT) to generate high-definition image descriptions, which would provide better results.
+
+#### Prepare PT Images
+
+Organize the data as follows in `./playground/data/EVE-Pretrain-33M/`:
+
+```none
+data
+├── EVE-Pretrain-33M
+│   │── eve_pretrain_cap33m.json
+│   ├── LAION-Dedump
+│   │   ├── images
+│   │   │   ├── 000000
+│   │   │   ├── 000001
+│   │   │   ├── ...
+│   ├── Openimages_v6
+│   │   ├── images
+│   │   │   ├── V6Train1
+│   │   │   ├── V6Train2
+│   │   │   ├── ...
+│   ├── SAM-11M
+│   │   ├── images
+│   │   │   ├── 000000
+│   │   │   ├── 000001
+│   │   │   ├── ...
+```
+
 
 ### EVE-SFT Dataset
 We utilize LLaVA-v1_5-mix665K as SFT data to obtain the standard version of EVE-7B. Besides, we also attempt to enlarge the limitation of maximum resolution only in the SFT stage. To bridge the resolution gap between pre-training and fine-tuning stages, we further involve 1.2M SFT conversation data, including AI2D, Synthdog, DVQA, ChartQA, DocVQA, Vision-Flan, and Bunny-695K to obtain high-resolution version of EVE-7B-HD.
 
-### Prepare Images
+#### Prepare SFT Images
 
-Please download the annotation of the final mixture SFT data: llava_v1_5_mix665k.json and eve_instruct_mix1.8m.json; Then download the images from constituting datasets:
+Please download the annotation of the final mixture SFT data: [llava_v1_5_mix665k.json](https://drive.google.com/file/d/1cnuVSRQ6_W80ZBnEYCeCzG9KHMGO3XrG/view?usp=sharing) and [eve_instruct_mix1.8m.json](https://drive.google.com/file/d/1iGg85xdJhyZv-s1ttCe_SZ-CUk-hThjs/view?usp=sharing); Then download the images from constituting datasets:
 
 - COCO: [train2017](http://images.cocodataset.org/zips/train2017.zip)
 - GQA: [images](https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip)

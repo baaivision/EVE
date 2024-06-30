@@ -1,16 +1,22 @@
 # <img src="images/eve_logo.png" style="vertical-align: -10px;" :height="30px" width="30px"> EVE: Unveiling Encoder-Free Vision-Language Models
 
-🚀🚀🚀 Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Models](https://arxiv.org/abs/2406.11832)**.
+Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Models](https://arxiv.org/abs/2406.11832)**.  
 
 ## 📜 News
-[2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) weights! 🚀   
-[2024/06/18] The [paper](https://arxiv.org/abs/2406.11832) is released! 💥   
+[2024/06/30] We release [training code](https://github.com/baaivision/EVE) ! 🚀 We are uploading [EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0) (maybe 2 days) ! 💥   
+[2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) weights ! 🚀   
+[2024/06/18] The [paper](https://arxiv.org/abs/2406.11832) is released ! 💥   
 
-## 🪐 Motivation
+## 💡 Motivation
 <p align="center">
   <img src="images/eve_motivation1.png">
 </p>
 
+- Can We Remove Vision Encoder from LVLMs ?  
+- How can We Transfer a LLM to an Encoder-free LVLM ?
+- How can We Efficiently Build It that Rivals Encoder-based LVLMs ?
+
+## 🛸 Architecture
 <p align="center">
   <img src="images/eve_structure.png">
 </p>
@@ -18,16 +24,16 @@
 - **Authors**: [Haiwen Diao*](https://scholar.google.com/citations?user=46eCjHQAAAAJ&hl=zh-CN), [Yufeng Cui*](https://scholar.google.com/citations?user=5Ydha2EAAAAJ&hl=zh-CN&oi=ao), [Xiaotong Li](https://scholar.google.com/citations?hl=zh-CN&user=cpCE_T4AAAAJ), [Yueze Wang](https://openreview.net/profile?id=~Yueze_Wang1), [Huchuan Lu📧](https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=zh-CN), [Xinlong Wang📧](https://scholar.google.com/citations?user=DPz0DjYAAAAJ&hl=zh-CN)
 
 - **Institutes**: Dalian University of Technology; Beijing Academy of Artificial Intelligence; Peking University
-- **Model Zoo**: [🤗[EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0)] [🤗EVE-7B] [🤗[EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0)] 
+- **Model Zoo**: [🤗[EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0)] [🤗[EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0)] [🤗[EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0)] 
 
 ## 💡 Highlights
-- 🔥 **Superior Capability:** *Originated encoder-free* LVLM with *arbitrary* image aspect ratio, outperforming the counterpart *[Fuyu-8B](https://huggingface.co/adept/fuyu-8b)* and approaching *modular encoder-based* LVLMs.  
+- 🔥 **Superior Capability:** *An originated encoder-free* LVLM with *arbitrary* image aspect ratio, outperforming the counterpart *[Fuyu-8B](https://huggingface.co/adept/fuyu-8b)* and approaching existing *modular encoder-based* LVLMs.  
 
-- 🔥 **Data Efficiency:** Filter solely *33M* publicly avaliable data from OpenImages, SAM, LAION for pre-training; Utilizing *665K* LLaVA SFT data for EVE-7B, and extra *1.2M* SFT data for EVE-7B (HD).  
+- 🔥 **Data Efficiency:** Filter solely *33M* publicly avaliable data from OpenImages, SAM, LAION for pre-training; Utilizing *665K* LLaVA SFT data for [EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0), and extra *1.2M* SFT data for [EVE-7B (HD)](https://huggingface.co/BAAI/EVE-7B-HD-v1.0).  
 
-- 🔥 **Training Efficiency:** Trained with *two 8-A100 (40G) nodes* in ~*9* days.  
+- 🔥 **Training Efficiency:** Trained with *two 8-A100 (40G) nodes* in ~*9* days or *four 8-A100 nodes* in ~*5* days
 
-- 🔥 **Pioneering Route:** An *efficient*, *transparent*, and *practical* strategy for developing pure decoder-only architecture across modalities.  
+- 🔥 **Pioneering Route:** We attempt to provide an *efficient*, *transparent*, and *practical* training strategy and procedure for developing a pure decoder-only architecture across modalities.  
 
 ## 🤖 Model Zoo
 
@@ -36,13 +42,12 @@ The usage of EVE checkpoints should comply with the base LLM's model license: [L
 | Model | LLM | Weight | VQAv2 | GQA | VizWiz | SQA_I | TextVQA | POPE | MME_P | MMBench | SEED | MM_Vet | 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | EVE_7B_Pretrain | Vicuna_7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0) | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| EVE_7B | Vicuna_7B | HF_link | 75.4 | 60.8 | 41.8 | 63.0 | 51.9 | 83.6 | 1217.3 | 49.5 | 54.3 | 25.6 |
+| EVE_7B | Vicuna_7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-v1.0) | 75.4 | 60.8 | 41.8 | 63.0 | 51.9 | 83.6 | 1217.3 | 49.5 | 54.3 | 25.6 |
 | EVE_7B_HD | Vicuna-7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) | 78.6 | 62.6 | 51.1 | 64.9 | 56.8 | 85.0 | 1305.7 | 52.3 | 56.8 | 25.7 |
 
 ## 👨‍💻 Todo List
-- [ ] Release training code and EVE-7B HF_link   
 - [ ] Involve more modalities into the unified EVE network  
-- [ ] Full EVE series (3B-70B) with better data, strategy, and structure 
+- [ ] Full EVE series (3B-70B) with larger data, better training strategy and model structure 
 
 ## Contents
 - [Install](#install)
@@ -98,7 +103,7 @@ openai
 ## Quick Usage
 <summary>Example Code</summary>
 
-```Python
+```python
 from eve.model.builder import load_pretrained_model
 from eve.mm_utils import get_model_name_from_path
 from eve.eval.run_eve import eval_model
@@ -116,7 +121,7 @@ Check out the details wth the `load_pretrained_model` function in `eve/model/bui
 
 You can also use `eve/eval/eval_one_sample.py` to get the output easily. By doing so, you can use this code on Colab directly after downloading this repository.
 
-``` 
+```python
 # run script
 CUDA_VISIBLE_DEVICES=0 python eve/eval/eval_one_sample.py
 ```
@@ -124,7 +129,7 @@ CUDA_VISIBLE_DEVICES=0 python eve/eval/eval_one_sample.py
 
 ## Demo
 You can also build up your local demo using the following script:
-```
+```python
 # run script
 python tools/app.py
 ```
@@ -143,20 +148,37 @@ we only adopt 16M of 33M image-text data
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 |EVE_Prealign| 1 | 512 | 4e-4 | cosine decay | 0.03 | 2048 | 0 | AdamW | zero3 |
 
+Training script for EVE_Prealign as follows:   
+```bash
+bash scripts/eve/eve7b_prealign.sh ${node_rank} ${master_addr}
+```
+
 **(2) Generative Pre-training Stage:**
 we use all 33M image-text pairs (EVE-cap33M) to train patch embedding and aligning layers, and the full LLM modules.
 
 | Model | Epoch | Batch_Size | Learning_Rate | LR_Schedule | Warmup_Ratio | Max_Length | Weight_decay | Optimizer | DeepSpeed |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
-| EVE_Pretrain | 1 | 512 | 4e-5 | cosine decay | 0.01 | 2048 | 0 | AdamW | zero3 |
+| EVE_Pretrain | 1 | 512 | 4e-5 | cosine decay | 0.01 | 2048 | 0 | AdamW | zero3 |  
+
+Training script for EVE_Pretrain as follows:   
+```bash
+bash scripts/eve/eve7b_pretrain.sh ${node_rank} ${master_addr}
+```
 
 **(3) Supervised Fine-tuning Stage:** 
 We finetune the entire architecture with LLaVA-mix-665K for EVE-7B and extra 1.2M SFT conversation data for EVE-7B (HD).  
 
 | Model | Epoch | Batch_Size | Learning_Rate | LR_Schedule | Warmup_Ratio | Max_Length | Weight_decay | Optimizer | DeepSpeed |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
-| EVE_Finetune | 1 | 128 | 2e-5 | cosine decay | 0.01 | 2048/4096 | 0 | AdamW | zero3 | 
+| EVE_Finetune | 1 | 128 | 2e-5 | cosine decay | 0.01 | 2048/4096 | 0 | AdamW | zero3 |  
 
+Training scripts for EVE_7B and EVE_7B_HD as follows:   
+```bash
+bash scripts/eve/eve7b_finetune.sh ${node_rank} ${master_addr}
+bash scripts/eve/eve7b_finetune_hd.sh ${node_rank} ${master_addr}
+``` 
+
+**[NOTE]:**   
 To train on fewer GPUs, you can reduce the `per_device_train_batch_size` and increase the `gradient_accumulation_steps` accordingly. Always keep the global batch size the same: `per_device_train_batch_size x gradient_accumulation_steps x num_gpus`.
 
 ## Evaluation
