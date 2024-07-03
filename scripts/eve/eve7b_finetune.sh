@@ -21,7 +21,7 @@ export MASTER_PORT=23456
 export CPUS_PER_TASK=32
 export QUOTA=reserved
 
-export DATA_PATH=playground/data/EVE-Finetune/eve_instruct_mix1.8m.json
+export DATA_PATH=playground/data/EVE-Finetune/llava_v1_5_mix665k.json
 export IMAGE_PATH=playground/data/EVE-Finetune
 export VIT_PATH=openai/eve-patch14-anypixel-672
 export VIT_PATH_CLIP=openai/clip-vit-large-patch14-336
