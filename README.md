@@ -3,7 +3,7 @@
 Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Models](https://arxiv.org/abs/2406.11832)**.  
 
 ## 📜 News
-[2024/06/30] We release [training code](https://github.com/baaivision/EVE) ! 🚀 We are uploading [EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0) (maybe 2 days) ! 💥   
+[2024/07/01] We release [training code](https://github.com/baaivision/EVE) ! 🚀 We are uploading [EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0) ! 💥   
 [2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) weights ! 🚀   
 [2024/06/18] The [paper](https://arxiv.org/abs/2406.11832) is released ! 💥   
 
@@ -11,7 +11,7 @@ Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Mod
 
 - **Can we remove vision encoder from VLMs?**
 
-- **How to transfer an LLM to an encoder-free VLM efficiently and stablely?**
+- **How to transfer an LLM to an encoder-free VLM efficiently and stably?**
   
 - **How to bridge the performance gap between encoder-free and encoder-based VLMs?** 
 
