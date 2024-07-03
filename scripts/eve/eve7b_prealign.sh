@@ -33,7 +33,7 @@ export BASE_LR=4e-5
 export LEARNIG_RATE=4e-4
 
 export CKPT_PATH=lmsys/vicuna-7b-v1.5
-export SAVE_PATH=eve-7b-prtr0-672-mse
+export SAVE_PATH=eve-7b-prtr0-672-mse (or EVE-7B-Prealign-v1.0)
 
 
 torchrun --nproc_per_node=$GPUS_PER_NODE --nnode=$NNODES --node_rank=$1 --master_addr=$2 --master_port=$MASTER_PORT \

@@ -28,8 +28,8 @@ export VIT_PATH_CLIP=openai/clip-vit-large-patch14-336
 export BASE_LR=2e-5
 export LEARNIG_RATE=2e-5
 
-export CKPT_PATH=checkpoints/eve-7b-prtr1-672-mse
-export SAVE_PATH=eve-7b-fitu-672-mse
+export CKPT_PATH=checkpoints/eve-7b-prtr1-672-mse (or EVE-7B-Pretrain-v1.0)
+export SAVE_PATH=eve-7b-fitu-672-mse (or EVE-7B-v1.0)
 
 
 torchrun --nproc_per_node=$GPUS_PER_NODE --nnode=$NNODES --node_rank=$1 --master_addr=$2 --master_port=$MASTER_PORT \
