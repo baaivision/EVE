@@ -112,7 +112,7 @@ from eve.model.builder import load_pretrained_model
 from eve.mm_utils import get_model_name_from_path
 from eve.eval.run_eve import eval_model
 
-model_path = "BAAI/EVE-7B-HD-v1.0"
+model_path = "Absolute Path of BAAI/EVE-7B-HD-v1.0"
 
 tokenizer, model, image_processor, context_len = load_pretrained_model(
     model_path=model_path,
