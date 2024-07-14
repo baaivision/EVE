@@ -43,11 +43,11 @@ Official pytorch implementation of **[Unveiling Encoder-Free Vision-Language Mod
 
 The usage of EVE checkpoints should comply with the base LLM's model license: [Llama 2](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md).   
 
-| Model | LLM | Weight | VQAv2 | GQA | VizWiz | SQA_I | TextVQA | POPE | MME_P | MMBench | SEED | MM_Vet | 
+| Model | LLM | Weight | VQAv2 | GQA | VizWiz | SQA_I | TextVQA | POPE | MME_P | MMBench | SEED/SEED_I | MM_Vet | 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| EVE_7B_Pretrain | Vicuna_7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0) | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| EVE_7B | Vicuna_7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-v1.0) | 75.4 | 60.8 | 41.8 | 63.0 | 51.9 | 83.6 | 1217.3 | 49.5 | 54.3 | 25.6 |
-| EVE_7B_HD | Vicuna-7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) | 78.6 | 62.6 | 51.1 | 64.9 | 56.8 | 85.0 | 1305.7 | 52.3 | 56.8 | 25.7 |
+| EVE_7B_Pretrain | Vicuna_7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0) | -- | -- | -- | -- | -- | -- | -- | -- | -- / --  | -- |
+| EVE_7B | Vicuna_7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-v1.0) | 75.4 | 60.8 | 41.8 | 63.0 | 51.9 | 83.6 | 1217.3 | 49.5 | 54.3 / 61.3 | 25.6 |
+| EVE_7B_HD | Vicuna-7B | [HF_link](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) | 78.6 | 62.6 | 51.1 | 64.9 | 56.8 | 85.0 | 1305.7 | 52.3 | 56.8 / 64.6 | 25.7 |
 
 ## 👨‍💻 Todo List
 - [ ] Involve more modalities into the unified EVE network.
