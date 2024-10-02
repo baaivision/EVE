@@ -1,6 +1,6 @@
 # <img src="images/eve_logo.png" style="vertical-align: -10px;" :height="30px" width="30px"> EVE: Unveiling Encoder-Free Vision-Language Models
 
-Official PyTorch implementation for NeurIPS2024 (spotlight) paper of **[Unveiling Encoder-Free Vision-Language Models](https://arxiv.org/abs/2406.11832)**.  
+PyTorch implementation for NeurIPS2024 (spotlight) paper of **[Unveiling Encoder-Free Vision-Language Models](https://arxiv.org/abs/2406.11832)**.  
 
 ## 📜 News
 [2024/09/26] 🔥🔥🔥 Our **EVE** has been accepted by **NeurIPS 2024** (**spotlight**) ! 💥    
