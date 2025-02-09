@@ -1,10 +1,10 @@
 # <img src="images/eve_logo.png" style="vertical-align: -10px;" :height="30px" width="30px"> EVEv2: Improved Baselines for Encoder-Free Vision-Language Models
 
-Official pytorch implementation of **[EVEv2: Improved Baselines for Encoder-Free Vision-Language Models](https://github.com/baaivision/EVE/EVEv2/images/EVEv2.0.pdf)**.  
+Official pytorch implementation of **[EVEv2: Improved Baselines for Encoder-Free Vision-Language Models](/blob/main/EVEv2/images/EVEv2.0.pdf)**.  
 
 ## 📜 News
-[2025/02/09] 🔥🔥🔥 We release [training code](https://github.com/baaivision/EVE) and [EVE-7B-HD-v2.0](https://huggingface.co/BAAI/EVE-7B-HD-v2.0) weights ! 🚀     
-[2025/02/09] The [paper](https://github.com/baaivision/EVE/EVEv2/images/EVEv2.0.pdf) is released ! 💥   
+[2025/02/09] 🔥🔥🔥 We release [training code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) and [EVE-7B-HD-v2.0](https://huggingface.co/BAAI/EVE-7B-HD-v2.0) weights ! 🚀     
+[2025/02/09] The [paper](https://github.com/baaivision/EVE/blob/main/EVEv2/images/EVEv2.0.pdf) is released ! 💥   
 
 ## 💡 Motivation
 

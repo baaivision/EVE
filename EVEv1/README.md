@@ -4,8 +4,8 @@ PyTorch implementation for NeurIPS2024 (spotlight) paper of **[Unveiling Encoder
 
 ## 📜 News
 [2024/09/26] 🔥🔥🔥 Our **EVE** has been accepted by **NeurIPS 2024** (**spotlight**) ! 💥    
-[2024/07/01] We release [training code](https://github.com/baaivision/EVE/EVEv1/README.md) and [EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0) weights ! 🚀    
-[2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE/EVEv1/README.md), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) weights ! 🚀   
+[2024/07/01] We release [training code](https://github.com/baaivision/EVE/blob/main/EVEv1/README.md) and [EVE-7B](https://huggingface.co/BAAI/EVE-7B-v1.0) weights ! 🚀    
+[2024/06/23] We release [evaluation code](https://github.com/baaivision/EVE/blob/main/EVEv1/README.md), [EVE-7B-Pretrain](https://huggingface.co/BAAI/EVE-7B-Pretrain-v1.0), and [EVE-7B-HD](https://huggingface.co/BAAI/EVE-7B-HD-v1.0) weights ! 🚀   
 [2024/06/18] The [paper](https://arxiv.org/abs/2406.11832) is released ! 💥   
 
 ## 💡 Motivation
