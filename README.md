@@ -18,7 +18,7 @@
 - **How to bridge the performance gap between encoder-free and encoder-based VLMs?** 
 
 ## 📜 News
-[2025/02/09] 🔥🔥🔥 The [paper](https://github.com/baaivision/EVE/blob/main/EVEv2/images/EVEv2.0.pdf), [weights](https://huggingface.co/BAAI/EVE-7B-HD-v2.0), and [code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) of **EVEv2** are released ! 💥    
+[2025/02/09] 🔥🔥🔥 The [paper](https://arxiv.org/abs/2502.06788), [weights](https://huggingface.co/BAAI/EVE-7B-HD-v2.0), and [code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) of **EVEv2** are released ! 💥    
 [2024/09/26] Our **EVE** has been accepted by **NeurIPS 2024** (**spotlight**) ! 💥       
 [2024/06/18] The [paper](https://arxiv.org/abs/2406.11832), [weights](https://huggingface.co/BAAI/EVE-7B-HD-v1.0), and [code](https://github.com/baaivision/EVE/blob/main/EVEv1/README.md) of **EVE** are released ! 💥   
 
@@ -43,7 +43,12 @@ If **EVE** is helpful for your research, please consider **star** ⭐ and **cita
 ```
 
 ```bibtex
-xxxx
+@article{diao2025EVEv2,
+  title={EVEv2: Improved Baselines for Encoder-Free Vision-Language Models},
+  author={Diao, Haiwen and Li, Xiaotong and Cui, Yufeng and Wang, Yueze and Deng, Haoge and Pan, Ting and Wang, Wenxuan and Lu, Huchuan and Wang, Xinlong},
+  journal={arXiv preprint arXiv:2502.06788},
+  year={2025}
+}
 ```
 
 ## 📄 License 
