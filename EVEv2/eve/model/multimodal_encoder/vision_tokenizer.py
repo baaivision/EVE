@@ -49,7 +49,7 @@ class VisionTokenizer(nn.Module):
                                                        kernel_size=self.dense_stride, 
                                                        stride=self.dense_stride))
         self.start_embedding = nn.Parameter(torch.randn(output_size))
-        self.end_embedding = nn.Parameter(torch.randn(output_size))
+        self.split_embedding = nn.Parameter(torch.randn(output_size))
 
     def forward(self, pixel_values):
                 
