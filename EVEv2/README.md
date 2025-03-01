@@ -70,7 +70,11 @@ pip install flash-attn --no-build-isolation
 
 #### Preparation
 
-Download `qwen_model` and extract them into `lmsys/` path:
+[NOTE]: The llama-related code only shows the EVE1.2's implementation details, which is copied from our another project. The training and testing of the current project **do not activate** this part, which is for reference only.      
+
+[NOTE]: One can find the config of [openai/eve-anyratio-res1600-patch16](https://github.com/baaivision/EVE/blob/main/EVEv2/openai/eve-anyratio-res1600-patch16/preprocessor_config.json) at the root of EVEv2 project.      
+
+[NOTE]: Download `qwen_model` and extract them into `lmsys/` path:
 - [Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct).   
 
 ```none

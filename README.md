@@ -4,9 +4,9 @@
   <img src="EVEv1/images/eve_motivation1.png">
 </p>
 
-- [EVEv1](https://github.com/baaivision/EVE/blob/main/EVEv1/README.md) - Unveiling Encoder-Free Vision-Language Models (NeurIPS 2024, 2024/09)
+- [2024/05: EVEv1](https://github.com/baaivision/EVE/blob/main/EVEv1/README.md) - Unveiling Encoder-Free Vision-Language Models (NeurIPS 2024, Spotlight)
 
-- [EVEv2](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) - EVEv2: Improved Baselines for Encoder-Free Vision-Language Models (ArXiv 2025, 2025/02)
+- [2024/11: EVEv2](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) - EVEv2: Improved Baselines for Encoder-Free Vision-Language Models (ArXiv 2025) 
 
 
 ## 💡 Motivation
