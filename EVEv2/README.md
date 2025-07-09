@@ -1,10 +1,12 @@
 # <img src="images/eve_logo.png" style="vertical-align: -10px;" :height="30px" width="30px"> EVEv2: Improved Baselines for Encoder-Free Vision-Language Models
 
-Official pytorch implementation of **[EVEv2: Improved Baselines for Encoder-Free Vision-Language Models](https://arxiv.org/abs/2502.06788)**.  
+PyTorch implementation for ICCV2025 paper of **[EVEv2: Improved Baselines for Encoder-Free Vision-Language Models](https://arxiv.org/abs/2502.06788)**.  
 
-## 📜 News
-[2025/02/11] The [paper](https://arxiv.org/abs/2502.06788) is released ! 💥    
-[2025/02/09] 🔥🔥🔥 We release [training code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) and [EVE-7B-HD-v2.0](https://huggingface.co/BAAI/EVE-7B-HD-v2.0) weights ! 🚀     
+## 📜 News   
+[2025/06] 🔥🔥🔥 **EVEv2** has been accepted by **ICCV 2025** !  
+[2025/02] We release [training code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) and [EVE-7B-HD-v2.0](https://huggingface.co/BAAI/EVE-7B-HD-v2.0) weights ! 🚀   
+[2025/02] The [paper](https://arxiv.org/abs/2502.06788) is released ! 🚀   
+[2024/11] 💥💥💥 **EVEv2** has been completed !    
 
 ## 💡 Motivation
 
@@ -12,9 +14,12 @@ Official pytorch implementation of **[EVEv2: Improved Baselines for Encoder-Free
   <img src="images/eve_motivation.jpg">
 </p>
 
-- **How to efficiently handle vision-language interference in one unified model?**
-  
-- **How to efficiently construct visual perception from scratch insides one LLM?** 
+- **How to efficiently construct visual perception from scratch inside one LLM?**   
+
+- **How to effectively mitigate catastrophic knowledge-forgetting issues in LLMs?**   
+
+- **How to effectively handle vision-language interference in one unified model?**  
+
 
 ## 🛸 Architecture
 <p align="center">
@@ -40,10 +45,6 @@ The usage of EVE checkpoints should comply with the base LLM's model license: [L
 <p align="center">
   <img src="images/eve_results.jpg">
 </p>
-
-## 👨‍💻 Todo List
-- [ ] Involve more modalities into the unified EVE network.
-- [ ] Full EVE series trained with more data, varied sizes, and better base models.
 
 ## Contents
 - [Install](#install)
@@ -190,7 +191,7 @@ See [Evaluation.md](docs/Evaluation.md).
 - [QwenLM](https://github.com/QwenLM/Qwen2.5): The amazing open-sourced large language model series!
 
 ## ✒️ Citation 
-If **EVE** is helpful for your research, please consider **star** ⭐ and **citation** 📝 :
+If **EVEv2** is helpful for your research, please consider **star** ⭐ and **citation** 📝 :
 ```bibtex
 @article{diao2025EVEv2,
   title={EVEv2: Improved Baselines for Encoder-Free Vision-Language Models},

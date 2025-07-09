@@ -14,14 +14,14 @@ from flash_attn.bert_padding import pad_input, unpad_input
 
 
 # ---- Haiwen Diao ---- #
-def moe_fuction(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
+def moe_function(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
     hidden_states = raw_layers(hidden_states) * (1. - visual_token_mask) \
                     + moe_layers(hidden_states) * visual_token_mask
     return hidden_states
 
 
 # ---- Haiwen Diao ---- #
-# def moe_fuction(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
+# def moe_function(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
 #     if training:
 #         hidden_states = raw_layers(hidden_states) * (1. - visual_token_mask) \
 #                         + moe_layers(hidden_states) * visual_token_mask
@@ -56,9 +56,9 @@ def forward(
     bsz, q_len, _ = hidden_states.size()
 
     if self.config.add_moe and ('self_attn' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-        query_states = moe_fuction(hidden_states, visual_token_mask, self.q_proj, self.moe_q_proj, self.training)
-        key_states = moe_fuction(hidden_states, visual_token_mask, self.k_proj, self.moe_k_proj, self.training)
-        value_states = moe_fuction(hidden_states, visual_token_mask, self.v_proj, self.moe_v_proj, self.training)
+        query_states = moe_function(hidden_states, visual_token_mask, self.q_proj, self.moe_q_proj, self.training)
+        key_states = moe_function(hidden_states, visual_token_mask, self.k_proj, self.moe_k_proj, self.training)
+        value_states = moe_function(hidden_states, visual_token_mask, self.v_proj, self.moe_v_proj, self.training)
     else:
         query_states = self.q_proj(hidden_states)
         key_states = self.k_proj(hidden_states)
@@ -126,7 +126,7 @@ def forward(
         output = pad_input(output_unpad, indices, bsz, q_len)
     
     if self.config.add_moe and ('self_attn' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-        output = moe_fuction(output, visual_token_mask, self.o_proj, self.moe_o_proj, self.training)                                                                       
+        output = moe_function(output, visual_token_mask, self.o_proj, self.moe_o_proj, self.training)                                                                       
     else:
         output = self.o_proj(output)
 

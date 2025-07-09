@@ -78,14 +78,14 @@ def _get_unpad_data(attention_mask):
 
 
 # ---- Haiwen Diao ---- #
-def moe_fuction(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
+def moe_function(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
     hidden_states = raw_layers(hidden_states) * (1. - visual_token_mask) \
                     + moe_layers(hidden_states) * visual_token_mask
     return hidden_states
 
 
 # ---- Haiwen Diao ---- #
-# def moe_fuction(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
+# def moe_function(hidden_states, visual_token_mask, raw_layers, moe_layers, training):
 #     if training:
 #         hidden_states = raw_layers(hidden_states) * (1. - visual_token_mask) \
 #                         + moe_layers(hidden_states) * visual_token_mask
@@ -397,9 +397,9 @@ class Qwen2FlashAttention2(Qwen2Attention):
 
         # ---- Haiwen Diao ---- #
         if self.config.add_moe and ('self_attn' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            query_states = moe_fuction(hidden_states, visual_token_mask, self.q_proj, self.moe_q_proj, self.training)
-            key_states = moe_fuction(hidden_states, visual_token_mask, self.k_proj, self.moe_k_proj, self.training)
-            value_states = moe_fuction(hidden_states, visual_token_mask, self.v_proj, self.moe_v_proj, self.training)
+            query_states = moe_function(hidden_states, visual_token_mask, self.q_proj, self.moe_q_proj, self.training)
+            key_states = moe_function(hidden_states, visual_token_mask, self.k_proj, self.moe_k_proj, self.training)
+            value_states = moe_function(hidden_states, visual_token_mask, self.v_proj, self.moe_v_proj, self.training)
         else:
             query_states = self.q_proj(hidden_states)
             key_states = self.k_proj(hidden_states)
@@ -515,7 +515,7 @@ class Qwen2FlashAttention2(Qwen2Attention):
 
         # ---- Haiwen Diao ---- #
         if self.config.add_moe and ('self_attn' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            attn_output = moe_fuction(attn_output, visual_token_mask, self.o_proj, self.moe_o_proj, self.training) 
+            attn_output = moe_function(attn_output, visual_token_mask, self.o_proj, self.moe_o_proj, self.training) 
         else:
             attn_output = self.o_proj(attn_output)
 
@@ -714,9 +714,9 @@ class Qwen2SdpaAttention(Qwen2Attention):
 
         # ---- Haiwen Diao ---- #
         if self.config.add_moe and ('self_attn' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            query_states = moe_fuction(hidden_states, visual_token_mask, self.q_proj, self.moe_q_proj, self.training)
-            key_states = moe_fuction(hidden_states, visual_token_mask, self.k_proj, self.moe_k_proj, self.training)
-            value_states = moe_fuction(hidden_states, visual_token_mask, self.v_proj, self.moe_v_proj, self.training)
+            query_states = moe_function(hidden_states, visual_token_mask, self.q_proj, self.moe_q_proj, self.training)
+            key_states = moe_function(hidden_states, visual_token_mask, self.k_proj, self.moe_k_proj, self.training)
+            value_states = moe_function(hidden_states, visual_token_mask, self.v_proj, self.moe_v_proj, self.training)
         else:
             query_states = self.q_proj(hidden_states)
             key_states = self.k_proj(hidden_states)
@@ -770,7 +770,7 @@ class Qwen2SdpaAttention(Qwen2Attention):
 
         # ---- Haiwen Diao ---- #
         if self.config.add_moe and ('self_attn' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            attn_output = moe_fuction(attn_output, visual_token_mask, self.o_proj, self.moe_o_proj, self.training) 
+            attn_output = moe_function(attn_output, visual_token_mask, self.o_proj, self.moe_o_proj, self.training) 
         else:
             attn_output = self.o_proj(attn_output)
 
@@ -843,7 +843,7 @@ class Qwen2DecoderLayer(nn.Module):
         # ---- Haiwen Diao ---- #
         assert visual_token_mask is not None or past_key_value is not None
         if self.config.add_moe and ('layernorm' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            hidden_states = moe_fuction(hidden_states, visual_token_mask, 
+            hidden_states = moe_function(hidden_states, visual_token_mask, 
                                         self.input_layernorm, self.moe_input_layernorm, self.training)
         else:
             hidden_states = self.input_layernorm(hidden_states)
@@ -867,7 +867,7 @@ class Qwen2DecoderLayer(nn.Module):
 
         # ---- Haiwen Diao ---- #
         if self.config.add_moe and ('layernorm' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            hidden_states = moe_fuction(hidden_states, visual_token_mask, 
+            hidden_states = moe_function(hidden_states, visual_token_mask, 
                                         self.post_attention_layernorm, 
                                         self.moe_post_attention_layernorm, self.training)
         else:
@@ -877,7 +877,7 @@ class Qwen2DecoderLayer(nn.Module):
         
         # ---- Haiwen Diao ---- #
         if self.config.add_moe and ('mlp' in self.config.moe_part) and (hidden_states.shape[1] != 1):
-            hidden_states = moe_fuction(hidden_states, visual_token_mask, self.mlp, self.moe_mlp, self.training)
+            hidden_states = moe_function(hidden_states, visual_token_mask, self.mlp, self.moe_mlp, self.training)
         else:
             hidden_states = self.mlp(hidden_states)
 
