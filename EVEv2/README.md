@@ -1,9 +1,9 @@
 # <img src="images/eve_logo.png" style="vertical-align: -10px;" :height="30px" width="30px"> EVEv2: Improved Baselines for Encoder-Free Vision-Language Models
 
-PyTorch implementation for ICCV2025 paper of **[EVEv2: Improved Baselines for Encoder-Free Vision-Language Models](https://arxiv.org/abs/2502.06788)**.  
+PyTorch implementation for ICCV2025 (highlight)  paper of **[EVEv2: Improved Baselines for Encoder-Free Vision-Language Models](https://arxiv.org/abs/2502.06788)**.  
 
 ## 📜 News   
-[2025/06] 🔥🔥🔥 **EVEv2** has been accepted by **ICCV 2025** !  
+[2025/06] 🔥🔥🔥 **EVEv2** has been accepted by **ICCV 2025** (**highlight**) !  
 [2025/02] We release [training code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) and [EVE-7B-HD-v2.0](https://huggingface.co/BAAI/EVE-7B-HD-v2.0) weights ! 🚀   
 [2025/02] The [paper](https://arxiv.org/abs/2502.06788) is released ! 🚀   
 [2024/11] 💥💥💥 **EVEv2** has been completed !    

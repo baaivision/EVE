@@ -6,7 +6,7 @@
 
 - **2024/05**: [EVEv1](https://github.com/baaivision/EVE/blob/main/EVEv1/README.md) - Unveiling Encoder-Free Vision-Language Models (NeurIPS 2024, spotlight)
 
-- **2024/11**: [EVEv2](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) - EVEv2: Improved Baselines for Encoder-Free Vision-Language Models (ICCV 2025) 
+- **2024/11**: [EVEv2](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) - EVEv2: Improved Baselines for Encoder-Free Vision-Language Models (ICCV 2025, highlight) 
 
 
 ## 💡 Motivation
@@ -18,7 +18,7 @@
 - **How to bridge the performance gap between encoder-free and encoder-based VLMs?** 
 
 ## 📜 News
-[2025/06] 🔥🔥🔥 **EVEv2** has been accepted by **ICCV 2025** !    
+[2025/06] 🔥🔥🔥 **EVEv2** has been accepted by **ICCV 2025** (**highlight**) !    
 [2025/02] The [paper](https://arxiv.org/abs/2502.06788), [weights](https://huggingface.co/BAAI/EVE-7B-HD-v2.0), and [code](https://github.com/baaivision/EVE/blob/main/EVEv2/README.md) of **EVEv2** are released !     
 [2024/11] 💥💥💥 **EVEv2** has been completed !      
 [2024/09] 🔥🔥🔥 **EVE** has been accepted by **NeurIPS 2024** (**spotlight**) !     
